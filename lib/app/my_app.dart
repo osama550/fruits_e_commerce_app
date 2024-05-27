@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           theme: AppTheme.theme(),
           routerConfig: AppRouter.router,
           debugShowCheckedModeBanner: false,
-          title: 'Name App',
+          title: 'Fruits Hub',
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
