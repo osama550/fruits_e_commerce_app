@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
@@ -15,8 +16,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () {
-       GoRouter.of(context).pushReplacement(AppRoutes.onBoardingView);
-
+      GoRouter.of(context).pushReplacement(AppRoutes.onBoardingView);
     });
     super.initState();
   }
@@ -28,7 +28,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: context.locale.languageCode == "en"
+              ? MainAxisAlignment.start
+              : MainAxisAlignment.end,
           children: [
             SvgPicture.asset(Assets.imagesPlant),
           ],

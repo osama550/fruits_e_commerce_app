@@ -19,6 +19,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   dio: ^5.4.3+1
+  dots_indicator: ^3.0.0
   easy_localization: ^3.0.7
   equatable: ^2.0.5
   flutter:
@@ -92,4 +93,4 @@ flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils
   filename: app_images.dart
-  field_prefix:
+  field_prefix: null

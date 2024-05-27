@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
-          theme: AppTheme.theme(),
+          theme: AppTheme.lightTheme(),
           routerConfig: AppRouter.router,
           debugShowCheckedModeBanner: false,
           title: 'Fruits Hub',
