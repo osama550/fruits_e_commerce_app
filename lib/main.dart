@@ -5,11 +5,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_e_commerce_app/app/my_app.dart';
 import 'package:fruits_e_commerce_app/core/cache/app_secure_storage.dart';
+import 'package:fruits_e_commerce_app/core/cache/cache_helper.dart';
 import 'package:fruits_e_commerce_app/core/config/app_bloc_observer.dart';
 import 'package:fruits_e_commerce_app/core/di/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,

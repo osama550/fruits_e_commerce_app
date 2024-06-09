@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_e_commerce_app/core/cache/cache_helper.dart';
 import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
 import 'package:fruits_e_commerce_app/core/utils/functions/app_text_styles.dart';
 import 'package:go_router/go_router.dart';
@@ -45,6 +46,7 @@ class PageViewItem extends StatelessWidget {
                 visible: isVisible,
                 child: GestureDetector(
                   onTap: () {
+                     CacheHelper.saveData(key: "isInBoardingSeen", value: true);
                     GoRouter.of(context).pushReplacement(AppRoutes.loginView);
                   },
                   child: Padding(

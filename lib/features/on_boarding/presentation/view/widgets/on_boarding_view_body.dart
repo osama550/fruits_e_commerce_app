@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_e_commerce_app/core/cache/cache_helper.dart';
 import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/widgets/custom_text.dart';
@@ -67,6 +68,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             ),
             child: CustomButton(
               onPressed: () {
+                CacheHelper.saveData(key: "isInBoardingSeen", value: true);
                 GoRouter.of(context).pushReplacement(AppRoutes.loginView);
               },
               text: context.tr("Startnow"),

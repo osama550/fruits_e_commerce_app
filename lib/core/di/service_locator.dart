@@ -8,6 +8,7 @@ GetIt sl = GetIt.instance;
 Future<void> setUpServiceLocator() async {
   //* Register the API service as a singleton.
   sl.registerSingleton(ApiService());
+  // sl.registerSingleton<CacheHelper>(CacheHelper());
 
   //* Register the dependencies related to authentication.
   registerAuthDepndencies();
