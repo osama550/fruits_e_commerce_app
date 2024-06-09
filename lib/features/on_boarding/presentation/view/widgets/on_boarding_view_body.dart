@@ -1,9 +1,11 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/widgets/custom_text.dart';
 import 'package:fruits_e_commerce_app/features/on_boarding/presentation/view/widgets/on_boarding_bage_view.dart';
+import 'package:go_router/go_router.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -65,9 +67,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             ),
             child: CustomButton(
               onPressed: () {
-                context.locale.languageCode == "en"
-                    ? context.setLocale(const Locale("ar"))
-                    : context.setLocale(const Locale("en"));
+                GoRouter.of(context).pushReplacement(AppRoutes.loginView);
               },
               text: context.tr("Startnow"),
             ),

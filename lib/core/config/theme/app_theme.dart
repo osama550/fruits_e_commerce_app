@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static ThemeData lightTheme() {
     return ThemeData(
+       fontFamily: 'Cairo',
       brightness: Brightness.light,
       bottomSheetTheme: const BottomSheetThemeData(
         backgroundColor: Colors.white,

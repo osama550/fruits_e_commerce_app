@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_images.dart';
+import 'package:fruits_e_commerce_app/core/utils/functions/app_text_styles.dart';
 import 'package:fruits_e_commerce_app/features/on_boarding/presentation/view/widgets/page_view_item.dart';
 
 class OnBoardingBageView extends StatelessWidget {
@@ -13,25 +15,34 @@ class OnBoardingBageView extends StatelessWidget {
       controller: pageController,
       children: [
         PageViewItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) ==
-                  0,
+          isVisible: true,
           image: Assets.imagesPageViewItem1Image,
           backgroundImage: Assets.imagesPageViewItem1Background,
           subtitle: context.tr("onBoardingSubTitle1"),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(context.tr("onBoardingTitle1")),
-              const Text(' Fruit'),
-              const Text('HUB'),
+              Text(
+                context.tr("onBoardingTitle1"),
+                style: TextStyles.bold23,
+              ),
+              Text(
+                ' Fruit',
+                style: TextStyles.bold23.copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+              Text(
+                'HUB',
+                style: TextStyles.bold23.copyWith(
+                  color: AppColors.secondaryColor,
+                ),
+              ),
             ],
           ),
         ),
         PageViewItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) !=
-                  0,
+          isVisible: false,
           image: Assets.imagesPageViewItem2Image,
           backgroundImage: Assets.imagesPageViewItem2Background,
           subtitle: context.tr("onBoardingSubTitle2"),
