@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 // #E19527 == Color(0xFFE19527)
-class ConstColor {
- static const Color foucsBorderColor = Colors.green;
-  static const Color borderColor = Color(0xFFBDBDBD);
-  static const primary = Color.fromRGBO(226, 149, 38, 1.0);
+abstract class AppColors {
+  static const Color primaryColor = Color(0xff1F5E3B);
+  static const Color lightPrimaryColor = Color(0xFF2D9F5D);
+  static const Color secondaryColor = Color(0xFFF4A91F);
+  static const Color foucsBorderColor = Colors.green;
 }

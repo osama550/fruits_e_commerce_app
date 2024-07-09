@@ -1,56 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 
 class AppTheme {
   static ThemeData lightTheme() {
     return ThemeData(
-       fontFamily: 'Cairo',
-      brightness: Brightness.light,
-      bottomSheetTheme: const BottomSheetThemeData(
-        backgroundColor: Colors.white,
-      ),
-      iconTheme: const IconThemeData(color: Colors.green),
-      dialogTheme: DialogTheme(
-        backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      ),
-      appBarTheme: const AppBarTheme(
-        scrolledUnderElevation: 0,
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
-        titleTextStyle: TextStyle(
-          fontSize: 22,
-          color: Colors.green,
-        ),
-        centerTitle: true,
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          disabledBackgroundColor: Colors.grey[300],
-          disabledForegroundColor: Colors.white10,
-          fixedSize: const Size(double.maxFinite, 50),
-          shadowColor: Colors.green,
-          elevation: 4,
-          foregroundColor: Colors.white,
-          backgroundColor: Colors.green,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-      ),
-      textButtonTheme: TextButtonThemeData(
-        style: TextButton.styleFrom(
-          textStyle: TextStyle(fontSize: 12, color: Colors.grey[900]),
-        ),
-      ),
-      hintColor: Colors.grey,
-      primaryColor: Colors.green,
-      cardColor: Colors.white,
-      scaffoldBackgroundColor: Colors.white,
-      dividerColor: Colors.grey,
-      shadowColor: Colors.black,
-      highlightColor: const Color(0xffF5F5F5),
-      textTheme: textTheme(),
-    );
+        fontFamily: 'Cairo',
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.primaryColor,
+        ));
   }
 
   static TextTheme textTheme() {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/core/cache/cache_helper.dart';
 import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
-import 'package:fruits_e_commerce_app/core/utils/widgets/custom_text.dart';
+import 'package:fruits_e_commerce_app/core/utils/widgets/custom_button.dart';
 import 'package:fruits_e_commerce_app/features/on_boarding/presentation/view/widgets/on_boarding_bage_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -64,7 +64,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           maintainState: true,
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 15,
+              horizontal: 16,
             ),
             child: CustomButton(
               onPressed: () {
