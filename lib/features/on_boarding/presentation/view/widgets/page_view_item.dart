@@ -46,8 +46,8 @@ class PageViewItem extends StatelessWidget {
                 visible: isVisible,
                 child: GestureDetector(
                   onTap: () {
-                     CacheHelper.saveData(key: "isInBoardingSeen", value: true);
-                    GoRouter.of(context).pushReplacement(AppRoutes.loginView);
+                    CacheHelper.saveData(key: "isInBoardingSeen", value: true);
+                    context.pushReplacement(AppRoutes.loginView);
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(16),

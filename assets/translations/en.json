@@ -14,5 +14,11 @@
 "RegisterwithFacebook":"RegisterwithFacebook",
 "SignUp":"Sign Up",
 "CreateAccount":"Create Account",
-"BySigning up, you agree to our Terms & Conditions and Privacy Policy":""
+"FullName":"Full Name",
+"ByCreatingAnAccountYouAgreeTo":"By creating an account, you agree to",
+"OurTermsAndConditions":"Our terms and conditions",
+"YouAlreadyHaveAnAccount":"You already have an account?",
+"Login":"Login"
+
+
 }

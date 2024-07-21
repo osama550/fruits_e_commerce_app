@@ -14,5 +14,9 @@
 "RegisterwithFacebook":"تسجيل بواسطة فيسبوك",
 "SignUp":"سجل الان",
 "CreateAccount":"انش�� حساب ��ديد",
-"BySigning up, you agree to the":"موافق على"
+"FullName": "الاسم كامل",
+"ByCreatingAnAccountYouAgreeTo":"من خلال إنشاء الحساب ، فإنك تتوافق على",
+"OurTermsAndConditions":"الأحكام والشروط الخاصه بنا",
+"YouAlreadyHaveAnAccount":"لديك حساب بالفعل ؟",
+"Login":"تسجيل الدخول"
 }

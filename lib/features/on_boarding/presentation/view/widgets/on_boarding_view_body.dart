@@ -69,7 +69,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: CustomButton(
               onPressed: () {
                 CacheHelper.saveData(key: "isInBoardingSeen", value: true);
-                GoRouter.of(context).pushReplacement(AppRoutes.loginView);
+                context.pushReplacement(AppRoutes.loginView);
               },
               text: context.tr("Startnow"),
             ),

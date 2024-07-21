@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 AppBar buildAppBar(BuildContext context, {required String title}) {
   return AppBar(
     leading: GestureDetector(
-        onTap: () => GoRouter.of(context).pop(),
+        onTap: () => context.pop(),
         child: const Icon(Icons.arrow_back_ios_new)),
     title: Text(title, style: TextStyles.bold19),
     centerTitle: true,

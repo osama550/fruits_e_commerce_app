@@ -1,13 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
 import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/functions/app_text_styles.dart';
 import 'package:go_router/go_router.dart';
 
-class DontHaveAnAcountView extends StatelessWidget {
-  const DontHaveAnAcountView({
+class HaveAnAcountView extends StatelessWidget {
+  const HaveAnAcountView({
     super.key,
   });
 
@@ -18,7 +17,7 @@ class DontHaveAnAcountView extends StatelessWidget {
         locale: context.locale,
         children: [
           TextSpan(
-            text: context.tr("DontHaveAnAccount"),
+            text: context.tr("YouAlreadyHaveAnAccount"),
             style: TextStyles.semiBold16.copyWith(
               color: const Color(0xFF949D9E),
             ),
@@ -30,9 +29,8 @@ class DontHaveAnAcountView extends StatelessWidget {
             ),
           ),
           TextSpan(
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => context.push(AppRoutes.signUpView),
-            text: context.tr("CreateAccount"),
+            recognizer: TapGestureRecognizer()..onTap = () => context.pop(),
+            text: context.tr("Login"),
             style:
                 TextStyles.semiBold16.copyWith(color: AppColors.primaryColor),
           ),
