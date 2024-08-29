@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/core/utils/widgets/custom_button.dart';
 import 'package:fruits_e_commerce_app/core/utils/widgets/custom_text_form_field.dart';
-import 'package:fruits_e_commerce_app/features/authentication/view/widgets/have_an_acount_view.dart';
-import 'package:fruits_e_commerce_app/features/authentication/view/widgets/terms_and_conditions.dart';
+import 'package:fruits_e_commerce_app/features/authentication/presentation/view/widgets/have_an_acount_view.dart';
+import 'package:fruits_e_commerce_app/features/authentication/presentation/view/widgets/terms_and_conditions.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});

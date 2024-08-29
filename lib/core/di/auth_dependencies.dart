@@ -1,14 +1,12 @@
-import 'package:fruits_e_commerce_app/core/api/api_service.dart';
-import 'package:fruits_e_commerce_app/features/authentication/data/data_source/auth_remote_data_source.dart';
-import 'package:fruits_e_commerce_app/features/authentication/data/repositories/auth_repository.dart';
+import 'package:fruits_e_commerce_app/core/services/firebase_auth_service.dart';
+import 'package:fruits_e_commerce_app/features/authentication/data/repos/repos_impl.dart';
+import 'package:fruits_e_commerce_app/features/authentication/domain/repos/auth_repos.dart';
 
 import 'service_locator.dart';
 
 void registerAuthDepndencies() {
   //* DATA SOURCE
-  sl.registerLazySingleton<AuthRemoteDataSource>(
-      () => AuthRemoteDataSource(sl<ApiService>()));
+sl.registerSingleton<FirebaseAuthService>(FirebaseAuthService());
   //* REPOSITORY
-  sl.registerLazySingleton<AuthRepository>(
-      () => AuthRepository(sl<AuthRemoteDataSource>()));
+   sl.registerSingleton<AuthRepo>(AuthRepoImpl(firebaseAuthService:  sl<FirebaseAuthService>()));
 }

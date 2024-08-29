@@ -18,5 +18,9 @@
 "ByCreatingAnAccountYouAgreeTo":"من خلال إنشاء الحساب ، فإنك تتوافق على",
 "OurTermsAndConditions":"الأحكام والشروط الخاصه بنا",
 "YouAlreadyHaveAnAccount":"لديك حساب بالفعل ؟",
-"Login":"تسجيل الدخول"
+"Login":"تسجيل الدخول",
+"ThePasswordProvidedIsTooWeak":"كلمة المرور المقدمة ضعيفة جدًا",
+"TheAccountAlreadyExistsForThatEmail.":"الحساب موجود بالفعل لهذا البريد الإلكتروني.",
+"SomethingWentWrong.PleaseTryAgain.":"لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى."
+
 }

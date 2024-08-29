@@ -18,7 +18,10 @@
 "ByCreatingAnAccountYouAgreeTo":"By creating an account, you agree to",
 "OurTermsAndConditions":"Our terms and conditions",
 "YouAlreadyHaveAnAccount":"You already have an account?",
-"Login":"Login"
+"Login":"Login",
+"ThePasswordProvidedIsTooWeak":"The password provided is too weak",
+"TheAccountAlreadyExistsForThatEmail.":"The account already exists for that email.",
+"SomethingWentWrong.PleaseTryAgain.":"Something went wrong. Please try again."
 
 
 }

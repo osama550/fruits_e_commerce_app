@@ -1,4 +1,7 @@
 abstract class Failure {
-  final dynamic errorMessage;
+  final String errorMessage;
   const Failure(this.errorMessage);
+}
+class ServerFailure extends Failure {
+  ServerFailure(super.message);
 }
