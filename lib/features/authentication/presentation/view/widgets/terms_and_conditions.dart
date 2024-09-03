@@ -4,15 +4,16 @@ import 'package:fruits_e_commerce_app/core/utils/app_colors.dart';
 import 'package:fruits_e_commerce_app/core/utils/functions/app_text_styles.dart';
 
 class TermsAndConditions extends StatefulWidget {
-  const TermsAndConditions({super.key});
-
+  const TermsAndConditions({super.key, required this.onChanged});
+  final ValueChanged<bool> onChanged;
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
 }
 
-bool isChecked = false;
+
 
 class _TermsAndConditionsState extends State<TermsAndConditions> {
+  bool isTermsAccepted = false;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -50,14 +51,15 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
           scale: 1.1,
           child: Checkbox(
             activeColor: AppColors.primaryColor,
-            value: isChecked,
+            value: isTermsAccepted,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(3.0),
                 side: const BorderSide() // Adjust the radius as needed
                 ),
             onChanged: (value) {
               setState(() {
-                isChecked = value!;
+                isTermsAccepted = value!;
+                widget.onChanged(value);
               });
             },
           ),

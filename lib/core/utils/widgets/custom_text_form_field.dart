@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:fruits_e_commerce_app/core/utils/functions/app_text_styles.dart';
 
@@ -6,14 +7,26 @@ class CustomTextFormField extends StatelessWidget {
       {super.key,
       required this.hintText,
       required this.textInputType,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.onSaved,
+      this.obscureText = false});
   final String hintText;
   final TextInputType textInputType;
   final Widget? suffixIcon;
+  final void Function(String?)? onSaved;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       keyboardType: textInputType,
+      onSaved: onSaved,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return context.tr("ThisFieldIsRequired");
+        }
+        return null;
+      },
       decoration: InputDecoration(
         suffix: suffixIcon,
         filled: true,

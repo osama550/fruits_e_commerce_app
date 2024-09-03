@@ -21,6 +21,8 @@
 "Login":"تسجيل الدخول",
 "ThePasswordProvidedIsTooWeak":"كلمة المرور المقدمة ضعيفة جدًا",
 "TheAccountAlreadyExistsForThatEmail.":"الحساب موجود بالفعل لهذا البريد الإلكتروني.",
-"SomethingWentWrong.PleaseTryAgain.":"لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى."
+"SomethingWentWrong.PleaseTryAgain.":"لقد حدث خطأ ما. الرجاء المحاولة مرة اخرى.",
+"ThisFieldIsRequired":"هذا الحقل مطلوب",
+"PleaseAcceptTerms":"الرجاء قبول الأحكام والشروط"
 
 }

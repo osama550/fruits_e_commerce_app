@@ -21,7 +21,9 @@
 "Login":"Login",
 "ThePasswordProvidedIsTooWeak":"The password provided is too weak",
 "TheAccountAlreadyExistsForThatEmail.":"The account already exists for that email.",
-"SomethingWentWrong.PleaseTryAgain.":"Something went wrong. Please try again."
+"SomethingWentWrong.PleaseTryAgain.":"Something went wrong. Please try again.",
+"ThisFieldIsRequired":"This field is required",
+"PleaseAcceptTerms":"Please Accept Terms"
 
 
 }
