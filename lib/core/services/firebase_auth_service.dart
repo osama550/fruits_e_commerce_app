@@ -13,7 +13,7 @@ class FirebaseAuthService {
         password: password,
       );
       return credential.user!;
-    } on FirebaseAuthException catch (e) {
+    } on FirebaseAuthException catch (e) {      
       log("Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()} and code is ${e.code}");
       if (e.code == 'weak-password') {
         throw CustomException(message: 'The password provided is too weak.');
@@ -30,6 +30,31 @@ class FirebaseAuthService {
     } catch (e) {
       log("Exception in FirebaseAuthService.createUserWithEmailAndPassword: ${e.toString()}");
 
+      throw CustomException(
+          message: 'An unknown error occurred. Please try again.');
+    }
+  }
+
+  Future<User> signInWithEmailAndPassword(
+      {required String email, required String password}) async {
+    try {
+      final credential = await FirebaseAuth.instance
+          .signInWithEmailAndPassword(email: email, password: password);
+      return credential.user!;
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        throw CustomException(message: 'Wrong email or password provided.');
+      } else if (e.code == 'wrong-password') {
+        throw CustomException(message: 'Wrong email or password provided.');
+      } else if (e.code == 'network-request-failed') {
+        throw CustomException(
+            message: 'Please check your internet connection and try again.');
+      } else {
+        throw CustomException(
+            message: 'An unknown error occurred. Please try again.');
+      }
+    } catch (e) {
+      log("Exception in FirebaseAuthService.signInWithEmailAndPassword: ${e.toString()}");
       throw CustomException(
           message: 'An unknown error occurred. Please try again.');
     }

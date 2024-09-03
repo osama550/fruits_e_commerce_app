@@ -9,8 +9,8 @@ import 'package:fruits_e_commerce_app/features/authentication/presentation/view/
 import 'package:fruits_e_commerce_app/features/authentication/presentation/view/widgets/or_divider.dart';
 import 'package:fruits_e_commerce_app/features/authentication/presentation/view/widgets/social_text_button.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SigninViewBody extends StatelessWidget {
+  const SigninViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {

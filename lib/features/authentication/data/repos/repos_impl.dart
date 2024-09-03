@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dartz/dartz.dart';
 import 'package:fruits_e_commerce_app/core/errors/exceptions.dart';
 import 'package:fruits_e_commerce_app/core/errors/failure.dart';
@@ -26,6 +28,7 @@ class AuthRepoImpl extends AuthRepo {
     } on CustomException catch (e) {
       return left(ServerFailure(e.toString()));
     } catch (e) {
+      log("Exeption in createUserWithEmailAndPassword ${e.toString()}");
       return left(ServerFailure(
         'An unknown error occurred. Please try again.',
       ));
@@ -46,9 +49,21 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<Either<Failure, UserEntity>> signinWithEmailAndPassword(
-      String email, String password) {
-    // TODO: implement signinWithEmailAndPassword
-    throw UnimplementedError();
+      String email, String password) async {
+    try {
+      var user = await firebaseAuthService.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return right(UserModel.fromFirebaseUser(user));
+    } on CustomException catch (e) {
+      return left(ServerFailure(e.toString()));
+    } catch (e) {
+      log("Exeption in signinWithEmailAndPassword ${e.toString()}");
+      return left(ServerFailure(
+        'An unknown error occurred. Please try again.',
+      ));
+    }
   }
 
   @override

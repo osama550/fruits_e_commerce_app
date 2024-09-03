@@ -8,7 +8,7 @@ import 'package:fruits_e_commerce_app/app/my_app.dart';
 import 'package:fruits_e_commerce_app/core/cache/app_secure_storage.dart';
 import 'package:fruits_e_commerce_app/core/cache/cache_helper.dart';
 import 'package:fruits_e_commerce_app/core/config/app_bloc_observer.dart';
-import 'package:fruits_e_commerce_app/core/di/service_locator.dart';
+import 'package:fruits_e_commerce_app/core/services/service_locator.dart';
 import 'package:fruits_e_commerce_app/core/utils/functions/check_firebase_state_changes.dart';
 import 'package:fruits_e_commerce_app/firebase_options.dart';
 
@@ -23,7 +23,7 @@ void main() async {
   await EasyLocalization.ensureInitialized();
 
   Bloc.observer = const AppBlocObserver();
-   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   checkFirebaseStateChanges();
   await setUpServiceLocator();
   await AppSecureStorage.instance.getToken();

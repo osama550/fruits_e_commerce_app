@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruits_e_commerce_app/core/config/router/app_routes.dart';
-import 'package:fruits_e_commerce_app/core/di/service_locator.dart';
+import 'package:fruits_e_commerce_app/core/services/service_locator.dart';
 import 'package:fruits_e_commerce_app/features/authentication/domain/repos/auth_repos.dart';
 import 'package:fruits_e_commerce_app/features/authentication/presentation/view/controller/signup_cubit/sign_up_cubit.dart';
-import 'package:fruits_e_commerce_app/features/authentication/presentation/view/login_view.dart';
+import 'package:fruits_e_commerce_app/features/authentication/presentation/view/sign_in_view.dart';
 import 'package:fruits_e_commerce_app/features/authentication/presentation/view/sign_up_view.dart';
 import 'package:fruits_e_commerce_app/features/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:fruits_e_commerce_app/features/splash/presentation/view/splash_view.dart';
@@ -21,13 +21,16 @@ abstract class AppRouter {
         builder: (context, state) => const OnBoardingView(),
       ),
       GoRoute(
-        path: AppRoutes.loginView,
-        builder: (context, state) => const LoginView(),
+        path: AppRoutes.signinView,
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignUpCubit(getIt.get<AuthRepo>()),
+          child: const SigninView(),
+        ),
       ),
       GoRoute(
         path: AppRoutes.signUpView,
         builder: (context, state) => BlocProvider(
-          create: (context) => SignUpCubit(sl<AuthRepo>()),
+          create: (context) => SignUpCubit(getIt.get<AuthRepo>()),
           child: const SignUpView(),
         ),
       ),

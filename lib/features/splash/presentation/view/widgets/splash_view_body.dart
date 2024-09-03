@@ -20,7 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         CacheHelper.getData(key: "isInBoardingSeen") ?? false;
     Future.delayed(const Duration(seconds: 3), () {
       if (isInBoardingSeen) {
-        context.pushReplacement(AppRoutes.loginView);
+        context.pushReplacement(AppRoutes.signinView);
       } else {
         context.pushReplacement(AppRoutes.onBoardingView);
       }
