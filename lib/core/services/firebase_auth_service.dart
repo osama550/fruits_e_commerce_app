@@ -74,4 +74,5 @@ class FirebaseAuthService {
 
     return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
   }
+  
 }
